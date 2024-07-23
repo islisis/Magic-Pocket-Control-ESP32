@@ -1,6 +1,6 @@
 # main-mstick-c.cpp Fork Notes: Patched for m5stickc plus 2
 
-ATTENTION: A fix for the changed TFT_eSPI LCD pin out is required in /.pio/libdeps/m5stick-c/M5StickCPlus/src/utility/In_eSPI_Setup.h
+ATTENTION: To run this on the m5stickc plus 2, a fix for the changed TFT_eSPI LCD pin out is required in /.pio/libdeps/m5stick-c/M5StickCPlus/src/utility/In_eSPI_Setup.h
 after the M5StickCPlus library is installed.
 
 /* existing definitions from plus
