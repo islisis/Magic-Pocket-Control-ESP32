@@ -1,3 +1,27 @@
+# main-mstick-c.cpp Fork Notes: Patched for m5stickc plus 2
+
+ATTENTION: A fix for the changed TFT_eSPI LCD pin out is required in /.pio/libdeps/m5stick-c/M5StickCPlus/src/utility/In_eSPI_Setup.h
+after the M5StickCPlus library is installed.
+
+/* existing definitions from plus
+#define TFT_MOSI 15
+#define TFT_SCLK 13
+#define TFT_CS 5 // Chip select line for TFT display on Shield
+#define TFT_DC 23 // Data/command line for TFT on Shield
+#define TFT_RST 18 // Reset line for TFT is handled by seesaw!
+*/
+
+// plus and plus2
+#define TFT_MOSI 15
+#define TFT_SCLK 13
+#define TFT_CS 5 // Chip select line for TFT display on Shield
+
+// plus2
+#define TFT_DC 14 // Data/command line for TFT on Shield
+#define TFT_RST 12 // Reset line for TFT is handled by seesaw!
+#define TFT_BL 27 // LED back-light (required for M5Stack)
+#define TFT_BACKLIGHT_ON HIGH // Level to turn ON back-light (HIGH or LOW)
+
 # :movie_camera: Magic Pocket Control for ESP32 devices
 Blackmagic Design camera control on a LILYGO T-Display-S3, M5Stack M5CoreS3, M5Stack M5StickC Plus, Freenove ESP32-S3-WROOM, or (hopefully) any other ESP32 device.
 
